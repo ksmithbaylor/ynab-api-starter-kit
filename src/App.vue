@@ -126,6 +126,7 @@
 
       clearBudget() {
         this.budgetId = null;
+        this.budget = null;
         this.loadingBudgets = false;
         this.error = null;
       },
