@@ -35,7 +35,7 @@
           <Download :budget="budget">
             <a
               href="#"
-              @click="budgetId = null"
+              @click="clearBudget"
               style="display: block; margin-bottom: 1.5em"
             >
               &lt; Select a different budget
@@ -103,27 +103,31 @@
           .getBudgets()
           .then(res => {
             this.budgets = res.data.budgets;
+            this.loadingBudgets = false;
           })
           .catch(err => {
+            this.loadingBudgets = false;
             if (err && err.error && err.error.detail) {
               this.error = err.error.detail;
             } else {
               this.error = err.message;
             }
           })
-          .finally(() => {
-            this.loadingBudgets = false;
-          });
       },
 
       // This selects a budget and gets all the transactions in that budget
       selectBudget(id) {
-        this.loadingBudgets = true;
         this.error = null;
         this.budgetId = id;
         this.api.budgets.getBudgetById(id).then(res => {
           this.budget = res.data.budget;
         });
+      },
+
+      clearBudget() {
+        this.budgetId = null;
+        this.loadingBudgets = false;
+        this.error = null;
       },
 
       // This builds a URI to get an access token from YNAB
