@@ -23,7 +23,7 @@
         return this.budget ? prettyBytes(this.budgetJson.length) : '<none>';
       },
       downloadFilename() {
-        return `${this.budget.name.replace(/ /g, '-')}-ynab-budget-export.json`;
+        return `${this.budget.data.name.replace(/ /g, '-')}-ynab-budget-export.json`;
       }
     },
     methods: {

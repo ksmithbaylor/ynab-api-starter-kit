@@ -120,7 +120,7 @@
         this.error = null;
         this.budgetId = id;
         this.api.budgets.getBudgetById(id).then(res => {
-          this.budget = res.data.budget;
+          this.budget = res.data;
         });
       },
 
