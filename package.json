@@ -4,7 +4,7 @@
   "description": "This allows an easy download of your full budget in JSON form, directly from YNAB's API.",
   "bin": "bin/start.js",
   "scripts": {
-    "start": "webpack-dev-server --open --hot",
+    "start": "webpack-dev-server --open --hot --content-base=public",
     "build": "NODE_ENV='production' webpack --progress --hide-modules"
   },
   "author": "Kevin Smith",
