@@ -1,21 +1,20 @@
 {
-  "name": "ynab-api-starter-kit",
-  "version": "1.0.1",
-  "description": "To quickly get started building an App with the YNAB API.",
+  "name": "ynab-json-exporter",
+  "version": "0.0.1",
+  "description": "This allows an easy download of your full budget in JSON form, directly from YNAB's API.",
   "bin": "bin/start.js",
   "scripts": {
     "start": "webpack-dev-server --open --hot",
     "build": "NODE_ENV='production' webpack --progress --hide-modules"
   },
-  "author": "You Need a Budget, LLC",
-  "license": "Apache-2.0",
+  "author": "Kevin Smith",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.2",
-    "cpr": "^3.0.1"
-  },
-  "devDependencies": {
+    "cpr": "^3.0.1",
     "css-loader": "^3.0.0",
     "npm-check-updates": "^3.1.17",
+    "pretty-bytes": "^5.3.0",
     "vue": "2.6.10",
     "vue-loader": "^15.7.0",
     "vue-server-renderer": "2.6.10",

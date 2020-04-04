@@ -1,4 +1,4 @@
 {
-  "clientId": "a56948bc5fe6e80c1a241151611a53350518c119ea413de4375694ebebbd68e0",
-  "redirectUri": "https://ynab.github.io/ynab-api-starter-kit/"
+  "clientId": "9b051247a7fd799ec905a1d42d8fcbf6a327c921c9c21f16d4475451ffdf38cf",
+  "redirectUri": "https://ynab-json-exporter.netlify.com/"
 }
